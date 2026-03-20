@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --box-shadow: 5px 5px 10px 10px rgba(101, 175, 10, 0.5);
   --bg-color: rgb(255, 255, 255);
@@ -410,3 +411,33 @@ a {
   }
 }
 
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes flow {
+  0% {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(500%);
+    opacity: 0;
+  }
+}
+
+.animate-flow {
+  animation: flow 1.6s linear infinite;
+}
+
+@font-face {
+  font-family: 'Viner Hand ITC';
+  src: url('/fonts/VinerHandITC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+>>>>>>> fa1a685 (Initial commit: portfolio website)

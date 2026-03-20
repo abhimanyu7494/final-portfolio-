@@ -9,8 +9,20 @@
     "baseColor": "slate",
     "cssVariables": true
   },
+<<<<<<< HEAD
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/utils"
   }
 }
+=======
+  "iconLibrary": "lucide",
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils"
+  },
+  "registries": {
+    "@react-bits": "https://reactbits.dev/r/{name}.json"
+  }
+}
+>>>>>>> fa1a685 (Initial commit: portfolio website)

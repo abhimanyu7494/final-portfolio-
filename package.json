@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
+<<<<<<< HEAD
     "@vercel/speed-insights": "^1.2.0",
     "aos": "^2.3.4",
     "class-variance-authority": "^0.7.0",
@@ -23,6 +24,18 @@
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "typed.js": "^2.1.0"
+=======
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.378.0",
+    "ogl": "^1.0.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.6.0",
+    "react-router-dom": "^7.9.4",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7"
+>>>>>>> fa1a685 (Initial commit: portfolio website)
   },
   "devDependencies": {
     "@types/node": "^20.12.8",
