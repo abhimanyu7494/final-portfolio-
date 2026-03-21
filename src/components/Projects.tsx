@@ -5,22 +5,22 @@ const projects = [
   {
     title: "Portfolio Website",
     desc: "Modern portfolio with React & Tailwind",
-    image: "/public/4th.png",
+    image: "/4th.png",
   },
   {
     title: "Portfolio Website",
     desc: "Modern portfolio with React & Tailwind",
-    image: "/public/3rd.png",
+    image: "/3rd.png",
   },
   {
     title: "E-Commerce App",
     desc: "Shopping app with cart & payment",
-    image: "/public/2nd.png",
+    image: "/2nd.png",
   },
   {
     title: "Chat App",
     desc: "Realtime chat using Socket.io",
-    image: "/public/1st.jpg",
+    image: "/1st.jpg",
   },
 ];
 
