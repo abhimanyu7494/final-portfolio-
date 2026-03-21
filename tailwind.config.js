@@ -17,10 +17,7 @@ module.exports = {
       },
     },
     extend: {
-<<<<<<< HEAD
-=======
       // --- COLORS, BORDER-RADIUS, ANIMATIONS AS BEFORE ---
->>>>>>> fa1a685 (Initial commit: portfolio website)
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -75,14 +72,11 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-<<<<<<< HEAD
-=======
 
       // --- ADD Viner Hand ITC FONT ---
       fontFamily: {
         viner: ['"Viner Hand ITC"', 'cursive'],
       },
->>>>>>> fa1a685 (Initial commit: portfolio website)
     },
   },
   plugins: [require("tailwindcss-animate")],

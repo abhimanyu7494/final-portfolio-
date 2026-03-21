@@ -3,14 +3,11 @@ import React from "react";
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen relative overflow-hidden">
-      
-      {/* Content */}
+
       <div className="relative z-10 flex items-center min-h-screen px-4 sm:px-6 md:px-16 lg:px-24 py-10">
         
-        {/* Mobile: single column, Desktop: two columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
-          
-          {/* LEFT SIDE: Text + Buttons */}
+
           <div className="text-white text-center md:text-left flex flex-col items-center md:items-start">
             
             <h2 className="text-base sm:text-lg md:text-xl text-gray-300 mb-2">
@@ -23,7 +20,6 @@ const Hero = () => {
               </span>
             </h1>
 
-            {/* RESPONSIVE PARAGRAPH */}
             <div className="text-gray-300 mb-6 text-center md:text-left space-y-2 md:space-y-3 leading-snug sm:leading-normal md:leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl max-w-md md:max-w-lg">
               <p>
                 A Full Stack Developer specializing in building modern web applications using React and Node.js.
@@ -33,7 +29,6 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Buttons */}
             <div className="flex flex-row flex-wrap justify-center md:justify-start gap-4">
               
               <a
@@ -53,7 +48,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE IMAGE */}
           <div className="flex justify-center mt-8 md:mt-0">
             <img
               src="/your-image.png"

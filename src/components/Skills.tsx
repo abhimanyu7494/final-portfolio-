@@ -1,30 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-import skills from "./data/skills.json";
-
-const Skills = () => {
-  return (
-    <div className="container skills" id="skills">
-      <h1>SKILLS</h1>
-      <div className="items">
-        {skills.map((data, index) => (
-          <div
-            className="item"
-            key={index} // ✅ id ke jagah index use kiya
-            data-aos="flip-left"
-            data-aos-duration="1000"
-          >
-            <img src={`/assets/${data.imageSrc}`} alt={data.title} />
-            <h3>{data.title}</h3>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default Skills;
-=======
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaJava } from "react-icons/fa";
 import { SiMongodb, SiMysql, SiTailwindcss } from "react-icons/si";
 
@@ -43,8 +17,7 @@ const skills = [
 const Skills = () => {
   return (
     <section id="skills" className="py-20 px-4 sm:px-6 md:px-16 text-white">
-      
-      {/* Heading */}
+
       <div className="text-center mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
           My{" "}
@@ -55,7 +28,6 @@ const Skills = () => {
         <p className="text-gray-400 mt-2">What I Know</p>
       </div>
 
-      {/* Skills Grid */}
       <div className="grid grid-cols-4 md:grid-cols-6 gap-6 place-items-center">
         
         {skills.map((skill, index) => {
@@ -68,8 +40,7 @@ const Skills = () => {
 
           return (
             <div key={index} className="flex flex-col items-center gap-3">
-              
-              {/* Circle */}
+
               <div className="relative w-24 h-24 sm:w-28 sm:h-28">
                 
                 <svg height="100%" width="100%" className="rotate-[-90deg]">
@@ -100,13 +71,11 @@ const Skills = () => {
                   </defs>
                 </svg>
 
-                {/* Center Icon */}
                 <div className="absolute inset-0 flex items-center justify-center text-xl sm:text-2xl">
                   {skill.icon}
                 </div>
               </div>
 
-              {/* Skill Name */}
               <p className="text-xs sm:text-sm text-gray-300">{skill.name}</p>
             </div>
           );
@@ -117,4 +86,3 @@ const Skills = () => {
 };
 
 export default Skills;
->>>>>>> fa1a685 (Initial commit: portfolio website)

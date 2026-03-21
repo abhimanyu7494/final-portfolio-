@@ -1,50 +1,11 @@
-<<<<<<< HEAD
-
-const Navbar = () => {
-  return (
-    <>
-      <div
-        className="container nav_bar"
-        data-aos="fade-down"
-        data-aos-duration="1000"
-      >
-        <div className="left nav_items">Portfolio</div>
-        <div className="right">
-          <a href="#home" className="nav_items">
-            Home
-          </a>
-          <a href="#about" className="nav_items">
-            About
-          </a>
-          <a href="#experience" className="nav_items">
-            Experience
-          </a>
-          <a href="#skills" className="nav_items">
-            Skills
-          </a>
-          <a href="#projects" className="nav_items">
-            Projects
-          </a>
-          <a href="#contact" className="nav_items">
-            Contact
-          </a>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default Navbar;
-=======
 import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
-  // 🔥 Yaha Experience add kiya
+  
   const navLinks = ["Home", "About", "Skills", "Projects", "Experience", "Contact"];
 
   const [activeLink, setActiveLink] = useState("Home");
 
-  // 🔥 Scroll to section
   const handleScrollTo = (link: string) => {
     const section = document.getElementById(link.toLowerCase());
     if (section) {
@@ -53,7 +14,6 @@ const Navbar = () => {
     }
   };
 
-  // 🔥 Active link on scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrollPos = window.scrollY + 200;
@@ -79,8 +39,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-center px-4 py-3 md:px-6 md:py-4">
-        
-        {/* Menu */}
+
         <ul className="flex gap-4 md:gap-8 text-white text-xs md:text-base flex-wrap justify-center">
           {navLinks.map((link) => (
             <li
@@ -96,7 +55,6 @@ const Navbar = () => {
                 {link}
               </span>
 
-              {/* Glow underline */}
               <span
                 className={`
                   absolute left-0 -bottom-1 w-full h-[2px] rounded-sm
@@ -113,11 +71,10 @@ const Navbar = () => {
           ))}
         </ul>
 
-       {/* Resume */}
 <a
-  href="/abhi.pdf"           // Public folder ka path
-  target="_blank"            // Naye tab me open karne ke liye
-  rel="noopener noreferrer"  // Security ke liye
+  href="/abhi.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
 >
   <button className="ml-6 px-2 py-1 md:px-4 md:py-2 text-xs md:text-base rounded-full bg-gradient-to-r from-pink-500 to-purple-500 hover:scale-105 transition">
     Resume
@@ -129,4 +86,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
->>>>>>> fa1a685 (Initial commit: portfolio website)
