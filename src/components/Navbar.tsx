@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
-  
   const navLinks = ["Home", "About", "Skills", "Projects", "Experience", "Contact"];
-
   const [activeLink, setActiveLink] = useState("Home");
 
   const handleScrollTo = (link: string) => {
@@ -17,34 +15,30 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPos = window.scrollY + 200;
-
       navLinks.forEach((link) => {
         const section = document.getElementById(link.toLowerCase());
-
         if (section) {
           const top = section.offsetTop;
           const bottom = top + section.offsetHeight;
-
           if (scrollPos >= top && scrollPos < bottom) {
             setActiveLink(link);
           }
         }
       });
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-lg">
-      <div className="max-w-7xl mx-auto flex justify-center px-4 py-3 md:px-6 md:py-4">
+      <div className="max-w-7xl mx-auto flex flex-wrap justify-center items-center px-4 py-3 md:px-6 md:py-4 gap-3 md:gap-8">
 
-        <ul className="flex gap-4 md:gap-8 text-white text-xs md:text-base flex-wrap justify-center">
+        <ul className="flex gap-3 md:gap-8 text-white text-xs md:text-base flex-wrap justify-center">
           {navLinks.map((link) => (
             <li
               key={link}
-              className="relative cursor-pointer"
+              className="relative cursor-pointer whitespace-nowrap"
               onClick={() => handleScrollTo(link)}
             >
               <span
@@ -56,8 +50,7 @@ const Navbar = () => {
               </span>
 
               <span
-                className={`
-                  absolute left-0 -bottom-1 w-full h-[2px] rounded-sm
+                className={`absolute left-0 -bottom-1 w-full h-[2px] rounded-sm
                   bg-pink-400 transition-all duration-300
                   ${
                     activeLink === link
@@ -71,15 +64,16 @@ const Navbar = () => {
           ))}
         </ul>
 
-<a
-  href="/abhi.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button className="ml-6 px-2 py-1 md:px-4 md:py-2 text-xs md:text-base rounded-full bg-gradient-to-r from-pink-500 to-purple-500 hover:scale-105 transition">
-    Resume
-  </button>
-</a>
+        <a
+          href="/abhi.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-0 md:ml-4 flex-shrink-0"
+        >
+          <button className="px-2 py-1 md:px-4 md:py-2 text-xs md:text-base rounded-full bg-gradient-to-r from-pink-500 to-purple-500 hover:scale-105 transition">
+            Resume
+          </button>
+        </a>
       </div>
     </nav>
   );
