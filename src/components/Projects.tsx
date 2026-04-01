@@ -1,26 +1,29 @@
 import React from "react";
-import ElectricBorder from "./ElectricBorder";
 
 const projects = [
   {
     title: "Portfolio Website",
     desc: "Modern portfolio with React & Tailwind",
-    image: "/4th.png",
+    image: "/3rd.png",
+    link: "https://abhimanyukr05.vercel.app",
   },
   {
     title: "Portfolio Website",
     desc: "Modern portfolio with React & Tailwind",
     image: "/3rd.png",
+    link: "https://your-portfolio2-link.com",
   },
   {
     title: "E-Commerce App",
     desc: "Shopping app with cart & payment",
     image: "/2nd.png",
+    link: "https://dataline.co.in",
   },
   {
     title: "Chat App",
     desc: "Realtime chat using Socket.io",
     image: "/1st.jpg",
+    link: "https://your-chatapp-link.com",
   },
 ];
 
@@ -39,17 +42,20 @@ const Projects = () => {
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
         {projects.map((project, i) => (
-          <ElectricBorder
+          
+          <a
             key={i}
-            color="#28a7a9"
-            speed={1}
-            chaos={0.15}
-            borderRadius={20}
-            className="p-[1.5px]"
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative group rounded-xl p-[1.5px] overflow-hidden block"
           >
-           
-            <div className="bg-[#0b0b1a] rounded-lg overflow-hidden">
-             
+            {/* Animated Border */}
+            <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 animate-borderLight bg-[linear-gradient(90deg,transparent,#28a7a9,transparent)]"></div>
+
+            {/* Card */}
+            <div className="relative bg-[#0b0b1a] rounded-xl overflow-hidden z-10">
+              
               <img
                 src={project.image}
                 alt={project.title}
@@ -64,8 +70,10 @@ const Projects = () => {
                   {project.desc}
                 </p>
               </div>
+
             </div>
-          </ElectricBorder>
+          </a>
+
         ))}
       </div>
     </section>
